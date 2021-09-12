@@ -13,7 +13,7 @@ pipeline {
     }
     stage("OCI Upload Artifact") {  
       steps {  
-        OCIUploadArtifact(credentialsId: "oci-devops", uploadArtifactDetailsList: [[artifactPath: "super-store/product-service", repositoryId: "ocid1.artifactrepository.oc1.eu-frankfurt-1.0.amaaaaaa36thv6aag7l52akya6ggxorsarvcmblgih7zonxwrclldve2ewca", repositoryType: "GENERIC", sourcePath: "/var/jenkins_home/workspace/super-store_master/target/product-service-0.0.1-SNAPSHOT.jar", version: "0.0.1-SNAPSHOT"]])  
+        OCIUploadArtifact(credentialsId: 'oci-devops', uploadArtifactDetailsList: [[artifactPath: 'super-store/product-service', repositoryId: 'ocid1.artifactrepository.oc1.eu-frankfurt-1.0.amaaaaaa36thv6aag7l52akya6ggxorsarvcmblgih7zonxwrclldve2ewca', repositoryType: 'GENERIC', sourcePath: '/var/jenkins_home/workspace/super-store_master/target/product-service-0.0.1-SNAPSHOT.jar', version: '0.0.1-SNAPSHOT']])  
       }  
     }
 
